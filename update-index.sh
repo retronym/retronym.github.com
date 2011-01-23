@@ -1,6 +1,6 @@
 #! /bin/bash
 
-LINKS=`for f in $(find . . \( ! -path '*/.*' \) -type f); do   echo "<a href='$f'>$f</a></br>"; done`
+LINKS=`for f in $(find . \( ! -path '*/.*' \) \( ! -name 'index.html' \) -type f); do   echo "<a href='$f'>$f</a></br>"; done`
 
 cat <<-EOF 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
